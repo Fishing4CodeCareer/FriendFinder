@@ -13,7 +13,7 @@ module.exports = function(app) {
         });
 
         app.post("/api/friendsfill", function(req, res) {
-            if (friendsfillData.length <5) {
+            if (friendsfillData.length <10) {
             friendsFillData.push(req.body);
             res.json(true);
             }
