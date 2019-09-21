@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <style>
-  body {
-    background-color: darkslategray;
-  }
-  </style>
+  
   <title>Friends Finder</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,7 +31,7 @@
                                 <h2><strong>Name Please</strong></h2></label>
                                 </form>
                               </div>
-                          <input type="text" id="reserve-name" class="form-control">
+                          <input type="text" id="reserve-title" class="form-control">
                           <h2><strong>Add an Image</strong></h2>
                           <input type="text" id="reserve-image" class="form-control">
                         </div>
@@ -201,7 +197,7 @@
                   $(".submit").on("click", function(event) {
                     event.preventDefault();
                     var newFriend = {
-                      name: $("#reserve-name").val().trim(),
+                      title: $("#reserve-name").val().trim(),
                       image: $("#reserve-image").val().trim(),
                       Q1: $("#reserve-Q1").val().trim(),
                       Q2: $("#reserve-Q2").val().trim(),
@@ -222,7 +218,7 @@
                         else {
                           alert("You are not friend type");
                         }
-                        $("#reserve-name").val("");
+                        $("#reserve-title").val("");
                         $("#reserve-image").val("");
                         $("#reserve-Q1").val("");
                         $("#reserve-Q2").val("");
