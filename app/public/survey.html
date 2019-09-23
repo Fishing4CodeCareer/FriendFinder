@@ -19,7 +19,7 @@
       <script type="text/javascript">
                   $(".submit").on("click", function(event) {
                     event.preventDefault();
-                    var newFriend = {
+                    var friends = {
                       title: $("#reserve-name").val().trim(),
                       image: $("#reserve-image").val().trim(),
                       Q1: $("#reserve-Q1").val().trim(),
@@ -33,7 +33,7 @@
                       Q9: $("#reserve-Q9").val().trim(),
                       Q10: $("#reserve-Q10").val().trim(),
                     };
-                    $.post("/api/reserve", newFriend,
+                    $.post("/api/friends", Friends,
                     function(data) {
                       if (data) {
                         alert("We can be friends!");
