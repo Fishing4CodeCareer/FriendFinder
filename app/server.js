@@ -1,7 +1,7 @@
 //server listens for what to require and make the call for us.
 var express = require("express");
 var app = express(); 
-var PORT = process.env.PORT || 3306;
+var PORT = process.env.PORT || 5500;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
