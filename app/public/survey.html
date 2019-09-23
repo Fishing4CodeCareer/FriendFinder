@@ -6,8 +6,58 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+      body {
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        font-size: 18px;
+        line-height: 34px;
+        color: #777;
+        background: url("../images/concrete_seamless.png");
+      }
+      </style>
+      <script type="text/javascript">
+                  $(".submit").on("click", function(event) {
+                    event.preventDefault();
+                    var newFriend = {
+                      title: $("#reserve-name").val().trim(),
+                      image: $("#reserve-image").val().trim(),
+                      Q1: $("#reserve-Q1").val().trim(),
+                      Q2: $("#reserve-Q2").val().trim(),
+                      Q3: $("#reserve-Q3").val().trim(),
+                      Q4: $("#reserve-Q4").val().trim(),
+                      Q5: $("#reserve-Q5").val().trim(),
+                      Q6: $("#reserve-Q6").val().trim(),
+                      Q7: $("#reserve-Q7").val().trim(),
+                      Q8: $("#reserve-Q8").val().trim(),
+                      Q9: $("#reserve-Q9").val().trim(),
+                      Q10: $("#reserve-Q10").val().trim(),
+                    };
+                    $.post("/api/reserve", newFriend,
+                    function(data) {
+                      if (data) {
+                        alert("We can be friends!");
+                      }
+                        else {
+                          alert("You are not friend type");
+                        }
+                        $("#reserve-title").val("");
+                        $("#reserve-image").val("");
+                        $("#reserve-Q1").val("");
+                        $("#reserve-Q2").val("");
+                        $("#reserve-Q3").val("");
+                        $("#reserve-Q4").val("");
+                        $("#reserve-Q5").val("");
+                        $("#reserve-Q6").val("");
+                        $("#reserve-Q7").val("");
+                        $("#reserve-Q8").val("");
+                        $("#reserve-Q9").val("");
+                        $("#reserve-Q10").val("");
+                      });
+
+                    });
+                    </script>
+                    
 </head>
 <body>
         <div class="container">
