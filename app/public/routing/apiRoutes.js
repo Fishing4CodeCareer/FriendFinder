@@ -3,7 +3,7 @@ var friendsData = require("../data/friendsData");
 //API take the request from the form fill data and the friends form.
 // The data is then pulled back down from the server to post the form filled results.
 module.exports = function(app) {
-    app.get("/api/friends", function(req, res){
+    app.get("/api/survey", function(req, res){
 
         res.json(friendsData);
     });
